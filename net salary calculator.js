@@ -1,0 +1,1 @@
+function salary = document.querySelector('#')
