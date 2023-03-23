@@ -1,12 +1,12 @@
-let resultSpeed = document.getElementById("resultSpeed");
-//conditions
+/*
+ we declare to variables and assign the value collected by the prompt
+  to the first variable. 
+*/
+let pace = parseInt(window.prompt("Enter speed"));
+let score;
+// We set conditions and to assign the appropriate response to the score variable
 function Convert(){
-    let pace = parseInt(speed.value);
-    if(pace < 0){
-        score = "The car is in reverse"
-    }else if(pace <= 0){
-        score = "Car is not moving"
-    }else if(pace <= 70){
+     if(pace <= 70){
         score = "OK"
     }else if(pace <= 75){
         score = "-1 merit point";
@@ -30,12 +30,15 @@ function Convert(){
         score = "-10 merit points";
     }else if(pace <= 125){
         score = "-11 merit points";
-    }else if(pace > 125){
+    }else if(pace > 130){
+        score = "-12 merit points";
+    }
+    else if(pace > 135){
         score = "License Suspended";
     }else{
         score = "Please fill out correctly";
     }
-    //what to return
+    //We log the score variable to the console as it contains the desired response
     console.log(score)
     resultSpeed.innerText = `${score}`;
 }
